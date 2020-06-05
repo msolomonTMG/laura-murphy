@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Font Aweome -->
+    <script src="https://use.fontawesome.com/21ee012dfb.js"></script>
+
+    <title>Laura Murphy • Editor</title>
+    <style>
+      @font-face {
+        font-family: Berthold;
+        src: url('assets/fonts/Berthold Akzidenz Grotesk Super.otf');
+      }
+      @font-face {
+        font-family: Akzidenz;
+        src: url('assets/fonts/Akzidenz-grotesk-black.ttf');
+      }
+      body {
+        font-family: Akzidenz;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .align-center: {
+        align-items: center;
+      }
+      .align-bottom: {
+        align-items: bottom;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-space-between {
+        justify-content: space-between;
+      }
+      .justify-space-around {
+        justify-content: space-around;
+      }
+      .nav-ad {
+        background-color: #1a1a1a;
+        height: 106px;
+      }
+      .nav {
+        background-color: #1a1a1a;
+        height: 50px;
+        border-bottom: 1px solid grey;
+      }
+      .nav-search {
+        color: white;
+        font-size: 24px;
+      }
+      .nav-icon {
+        background-image: url('assets/mtv.png');
+      }
+      .nav-items {
+        font-family: Berthold;
+        font-size: 22px;
+        background-color: #1a1a1a;
+        color: white;
+        cursor: pointer;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: #00bbef;
+      }
+      .white {
+        color: #ffffff;
+      }
+      .blue-circle {
+        background-color: #00bbef;
+        border-radius: 50%;
+        height: auto;
+        width: auto;
+      }
+      .social {
+        border-radius: 50%;
+        width: 35px;
+        text-align: center;
+        background-color: #fff;
+        color: #1a1a1a;
+      }
+      .header-image {
+        background-image: url("header.jpg");
+        min-height: 535px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+      }
+      .grid {
+        min-height: 460px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+      }
+      .grid-image-1 {
+        background-image: url("editing.jpg");
+      }
+      .grid-image-2 {
+        background-image: url("runner.jpg");
+      }
+      .grid-image-3 {
+        background-image: url("project-management.png");
+      }
+      .grid-image-4 {
+        background-image: url("strategy.jpg");
+      }
+      .overlay {
+        background: linear-gradient(to bottom, transparent 0%, black 100%);
+      }
+      .time {
+        background-color: #1a1a1a;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        z-index: 999;
+      }
+      .headline {
+        font-size: 70px;
+        color: white;
+        line-height: 50px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        z-index: 999;
+      }
+      .headline-small {
+        font-size: 40px;
+        padding: 0px;
+        color: white;
+        line-height: 50px;
+        z-index: 999;
+      }
+      .tagline {
+        font-size: 30px;
+        color: white;
+        z-index: 999;
+      }
+      .tagline-small {
+        color: white;
+        z-index: 999;
+        font-size: 24px;
+        line-height: 0rem;
+        padding-top: 10px;
+      }
+      .icon-outline {
+        font-size: 32px;
+        padding-top: 15px;
+      }
+      .icon-arrow {
+        font-size: 20px;
+        padding-left: 2px;
+      }
+      .header-ad {
+        border: 1px solid white;
+        height: 90px;
+        width: 720px;
+        margin-top: 5px;
+      }
+      .sidebar-header {
+        background-color: yellow;
+        border-bottom: 5px solid #1a1a1a;
+        font-weight: 700;
+        font-size: 23px;
+        padding: 5px 15px 0px 15px;
+      }
+      .m-15 {
+        margin: 13px 13px 0px 0px;
+      }
+      .sidebar-margin {
+        margin: 13px 0px 15px 0px;
+      }
+      .sidebar-img {
+        height: 100px;
+        width: 178px;
+      }
+      .sidebar-headline {
+        font-size: 20px;
+      }
+      .sidebar-text {
+        font-family: Arial;
+        text-transform: lowercase;
+      }
+      .resume-btn {
+        font-size: 20px;
+      }
+      .mobile {
+        text-align: center;
+        background-color: #1a1a1a;
+        color: white;
+      }
+      .mobile-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .mobile-header {
+        padding-top: 50px;
+      }
+      .mobile-btn {
+        background-color: white;
+        color: #1a1a1a;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Site -->
+    <div class="d-lg-none">
+      <div class="mobile">
+        <div class="mobile-header">
+          <img src="assets/mtv.png" height="30px"/>
+          <h3 class="pt-2">Laura Murphy</h3>
+          <strong>Prospective MTV Production Editor</strong>
+          <p class="pt-5">This site was made to be viewed on a desktop</p>
+          <p>You should come back and check it out on your computer!</p>
+          <p class="pt-5">
+            If you're short on time, you can download my resume here
+          </p>
+          <a href="laura-murphy-resume.pdf">
+            <button type="button" class="btn btn-dark mobile-btn">
+              resume <i class="fa fa-chevron-right"></i>
+            </button>
+          </a>
+        </div>
+        <div class="mobile-center">
+        </div>
+      </div>
+    </div>
+    <!-- Desktop Site -->
+    <div class="d-none d-lg-block">
+      <div class="container-fluid nav-ad">
+        <div class="d-flex justify-center align-center">
+          <div class="header-ad">
+            <div class="container">
+              <div class="row float-right">
+                <i class="white pr-1 pt-1 fa fa-close"></i>
+              </div>
+              <div class="row">
+                <div class="white col">
+                  Ad
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid nav">
+        <div class="container">
+          <div class="row d-flex align-center">
+            <div class="col pl-1">
+              <img src="assets/mtv.png" height="30px"/>
+            </div>
+            <div class="col-6">
+              <!-- Space -->
+            </div>
+            <div class="col">
+              <div class="d-flex justify-end">
+                <div class="nav-search"><i class="fa fa-search"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid nav-items pt-2">
+        <div class="container">
+          <div class="row d-flex align-center">
+            <div class="col-9 pl-0">
+              <span class="pr-4">shows <i class="fa fa-chevron-down"></i></span>
+              <span class="pr-4">news <i class="fa fa-chevron-down"></i></span>
+              <span class="pr-4">music <i class="fa fa-chevron-down"></i></span>
+              <span class="pr-4">app</span>
+              <span class="pr-4">mtv shop</span>
+              <span class="pr-4">watch live tv
+                <span class="red">&bullet;</span>
+              </span>
+              
+            </div>
+            <div class="col">
+              <div class="d-flex justify-end">
+                <span class="mr-3 pt-1 mb-1 social"><i class="fa fa-facebook"></i></span>
+                <span class="mr-3 pt-1 mb-1 social"><i class="fa fa-twitter"></i></span>
+                <span class="pt-1 mb-1 social"><i class="fa fa-instagram"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-story">
+        <a style="text-decoration: none;" href="laura-murphy-resume.pdf">
+          <div class="header-image d-flex flex-column">
+          <div class="mt-auto pb-5 overlay">
+            <div class="container-fluid ml-2">
+              <div class="row">
+                <div class="time">production editor</div>
+              </div>
+              <div class="row">
+                <div class="headline">laura murphy</div>
+              </div>
+              <div class="row">
+                <div class="tagline">creating fun and innovative content to kill boring
+                  <span class="fa-stack">
+                    <i class="blue fa fa-circle fa-stack-2x icon-outline"></i>
+                    <i class="fa fa-chevron-right fa-stack-1x icon-arrow"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <a style="text-decoration: none;" href="laura-murphy-resume.pdf">
+            <div class="grid">
+              <div class="container-fluid p-0">
+                <div class="row">
+                  <div class="col p-0">
+                    <div class="grid grid-image-1 d-flex flex-column">
+                      <div class="mt-auto pb-5 overlay">
+                        <div class="container-fluid ml-4">
+                          <div class="row">
+                            <div class="time">dec 2019 - may 2019 &bullet; PS260</div>
+                          </div>
+                          <div class="row">
+                            <div class="headline-small">Assistant Editor</div>
+                          </div>
+                          <div class="row">
+                            <div class="tagline-small">
+                              worked closely with producers, editors and animators to execute editing projects
+                              <span class="fa-stack">
+                                <i class="fa fa-chevron-right fa-stack-1x icon-arrow"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-0">
+                    <div class="grid grid-image-2 d-flex flex-column">
+                      <div class="mt-auto pb-5 overlay">
+                        <div class="container-fluid ml-2">
+                          <div class="row">
+                            <div class="time">jul 2018 - dec 2019 &bullet; PS260</div>
+                          </div>
+                          <div class="row">
+                            <div class="headline-small">Post-Production Runner</div>
+                          </div>
+                          <div class="row">
+                            <div class="tagline-small">
+                              assisted editors as needed while being trained for editing role
+                              <span class="fa-stack">
+                                <i class="fa fa-chevron-right fa-stack-1x icon-arrow"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col p-0">
+                    <div class="grid grid-image-3 d-flex flex-column">
+                      <div class="mt-auto pb-5 overlay">
+                        <div class="container-fluid ml-4">
+                          <div class="row">
+                            <div class="time">feb 2018 - jul 2018 &bullet; Fabl</div>
+                          </div>
+                          <div class="row">
+                            <div class="headline-small">Project Manager</div>
+                          </div>
+                          <div class="row">
+                            <div class="tagline-small">
+                              managed campaigns that connected <br>consumers to captivating stories
+                              <span class="fa-stack">
+                                <i class="fa fa-chevron-right fa-stack-1x icon-arrow"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col p-0">
+                    <div class="grid grid-image-4 d-flex flex-column">
+                      <div class="mt-auto pb-5 overlay">
+                        <div class="container-fluid ml-2">
+                          <div class="row">
+                            <div class="time">jul 2018 - dec 2019 &bullet; PS260</div>
+                          </div>
+                          <div class="row">
+                            <div class="headline-small">Content &amp; Strategy Intern</div>
+                          </div>
+                          <div class="row">
+                            <div class="tagline-small">
+                              assisted editors as needed while being trained for editing role
+                              <span class="fa-stack">
+                                <i class="fa fa-chevron-right fa-stack-1x icon-arrow"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col m-15">
+                  <div class="sidebar-header">
+                    get in touch with me
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col sidebar-margin">
+                  <div class="row">
+                    <div class="col sidebar-margin">
+                      <div class="row">
+                        <div class="col-4">
+                          <img class="sidebar-img" src="gmail.jpg"/>
+                        </div>
+                        <div class="col ml-2">
+                          <div class="row">
+                            <span class="sidebar-headline">email me</span>
+                          </div>
+                          <div class="row">
+                            <span class="sidebar-text">
+                              <a style="color: inherit;" href="mailto:lurph55@gmail.com">lurph55@gmail.com</a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <img class="sidebar-img" src="iphone.jpg"/>
+                    </div>
+                    <div class="col ml-2">
+                      <div class="row">
+                        <span class="sidebar-headline">hmu</span>
+                      </div>
+                      <div class="row">
+                        <span class="sidebar-text">
+                          516.639.5803
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col sidebar-margin">
+                      <div class="row">
+                        <div class="col-4">
+                          <img class="sidebar-img" src="astoria.jpg"/>
+                        </div>
+                        <div class="col ml-2">
+                          <div class="row">
+                            <span class="sidebar-headline">send me stuff</span>
+                          </div>
+                          <div class="row">
+                            <span class="sidebar-text">
+                              22-43 35th Street, Astoria, NY 11105
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-center">
+                      <a href="laura-murphy-resume.pdf">
+                        <button type="button" class="btn btn-dark resume-button">
+                          download full resume <i class="pt-2 fa fa-chevron-right"></i>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
