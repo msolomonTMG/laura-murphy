@@ -89,14 +89,6 @@
         background-color: #fff;
         color: #1a1a1a;
       }
-      .header-image {
-        background-image: url("header.jpg");
-        min-height: 535px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100%;
-      }
       .grid {
         min-height: 460px;
         background-repeat: no-repeat;
@@ -222,6 +214,20 @@
         height: 90px;
         color: teal;
       }
+      .header-image {
+        /* background-image: url("header.jpg"); */
+        min-height: 535px;
+        /* background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; */
+        width: 100%;
+        position: relative;
+      }
+      .iframe-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -309,9 +315,17 @@
         </div>
       </div>
       <div class="main-story">
-        <a style="text-decoration: none;" href="laura-murphy-resume.pdf">
-          <div class="header-image d-flex flex-column">
-          <div class="mt-auto pb-5 overlay">
+        <div class="header-image d-flex flex-column">
+          <iframe 
+            width="100%" 
+            height="535px" 
+            src="https://www.youtube.com/embed/7POPyOPLBMw" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            title="Laura Murphy Reel"
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden;cursor:pointer;}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/7POPyOPLBMw?autoplay=1><img src=https://github.com/msolomonTMG/laura-murphy/raw/master/header.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"
+          ></iframe>
+          <div class="mt-auto pb-5 overlay iframe-text">
             <div class="container-fluid ml-2">
               <div class="row">
                 <div class="time">video editor/fiend</div>
@@ -330,7 +344,6 @@
             </div>
           </div>
         </div>
-        </a>
       </div>
       <div class="row">
         <div class="col-8">
